@@ -1,3 +1,5 @@
+<p align="right">🇷🇺 <b>Русский</b> · <a href="README_EN.md">🇬🇧 English</a></p>
+
 # ⏱️ Focus Timer
 
 Минималистичный **Pomodoro-таймер** для концентрации на чистом HTML, CSS и JavaScript — без фреймворков и зависимостей.
