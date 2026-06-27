@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Timer — Pomodoro</title>
+  <meta name="description" content="Минималистичный Pomodoro-таймер для концентрации: работа, короткий и длинный перерыв." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1 class="app__title">Focus Timer</h1>
+      <p class="app__subtitle">Техника Pomodoro для концентрации</p>
+    </header>
+
+    <nav class="modes" aria-label="Режимы">
+      <button class="modes__btn is-active" data-mode="focus" type="button">Работа</button>
+      <button class="modes__btn" data-mode="short" type="button">Короткий перерыв</button>
+      <button class="modes__btn" data-mode="long" type="button">Длинный перерыв</button>
+    </nav>
+
+    <section class="timer" aria-live="polite">
+      <svg class="timer__ring" viewBox="0 0 240 240" aria-hidden="true">
+        <circle class="timer__track" cx="120" cy="120" r="110" />
+        <circle class="timer__progress" cx="120" cy="120" r="110" />
+      </svg>
+      <div class="timer__display">
+        <span class="timer__time" id="time">25:00</span>
+        <span class="timer__label" id="label">Время сосредоточиться</span>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button class="controls__btn controls__btn--primary" id="startPause" type="button">Старт</button>
+      <button class="controls__btn" id="reset" type="button">Сброс</button>
+    </div>
+
+    <footer class="stats">
+      <span>Завершено сессий сегодня: <strong id="completed">0</strong></span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
